@@ -3,8 +3,10 @@ import { APPSTORE, PLAYSTORE, TRIPLE_LOGO } from "../images";
 
 export const MainContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
   min-width: 1200px;
+  height: 100%;
   margin: 0 auto;
 `;
 export const ContentContainer = styled.div`
@@ -27,9 +29,10 @@ export const Triple = styled.div`
   height: 338px;
   padding-top: 280px;
   text-align: center;
+  font-family: sans-serif;
   font-size: 15px;
-  color: rgba(58, 58, 58, 0.7);
   font-weight: 400;
+  color: rgba(58, 58, 58, 0.7);
   display: block;
   position: absolute;
   top: 150px;
@@ -37,6 +40,7 @@ export const Triple = styled.div`
   bottom: -76px;
   left: 0;
   box-sizing: border-box;
+  line-height: 15px;
 `;
 export const AwardsContainer = styled.div`
   display: block;
@@ -70,7 +74,7 @@ export const MetricItem = styled.div`
   font-size: 36px;
   line-height: 36px;
   letter-spacing: -1px;
-  font-weight: 400px;
+  font-weight: 400;
   margin-bottom: 20px;
   color: rgb(58, 58, 58);
 `;

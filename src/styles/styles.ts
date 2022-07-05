@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { APPSTORE, PLAYSTORE, TRIPLE_LOGO } from "../images";
 
 export const MainContainer = styled.div`
@@ -9,6 +9,18 @@ export const MainContainer = styled.div`
   height: 100%;
   margin: 0 auto;
 `;
+const Animation = keyframes`
+  0%{
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`;
+
 export const ContentContainer = styled.div`
   display: block;
   justify-content: center;
@@ -41,10 +53,14 @@ export const Triple = styled.div`
   left: 0;
   box-sizing: border-box;
   line-height: 15px;
+  opacity: 0;
+  animation: ${Animation} 700ms ease-in forwards 100ms;
 `;
 export const AwardsContainer = styled.div`
   display: block;
   margin: 50px 0px 140px 623px;
+  opacity: 0;
+  animation: ${Animation} 700ms linear forwards 1500ms;
 `;
 export const PlayStoreAwards = styled.div`
   height: 54px;
@@ -69,6 +85,8 @@ export const MetricContainer = styled.div`
   padding-top: 150px;
   display: block;
   margin-left: 623px;
+  opacity: 0;
+  animation: ${Animation} 700ms linear forwards 400ms;
 `;
 export const MetricItem = styled.div`
   font-size: 36px;

@@ -1,7 +1,7 @@
 import React from "react";
 import useCountUp from "../hooks/useCountUp";
 import { MetricContainer, MetricItem, Strong } from "../styles/styles";
-const Metric = () => {
+const Metric: React.FC = () => {
   const userCount = useCountUp(700);
   const reviewCount = useCountUp(100);
   const planCount = useCountUp(470);

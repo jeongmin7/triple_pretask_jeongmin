@@ -1,10 +1,14 @@
 import React from "react";
-import { Triple } from "../styles/styles";
+import useFadeIn from "../hooks/useFadeIn";
+import { Triple } from "../styles/LogoStyle";
 
 const TripleLogo = () => {
+  const [opacity, translateY] = useFadeIn();
   return (
     <div>
-      <Triple>2021년 12월 기준</Triple>
+      <Triple opacity={opacity} translateY={translateY}>
+        2021년 12월 기준
+      </Triple>
     </div>
   );
 };

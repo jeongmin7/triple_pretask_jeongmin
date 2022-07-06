@@ -1,13 +1,15 @@
 import React from "react";
+import useFadeIn from "../hooks/useFadeIn";
 import {
   AppStoreAwards,
   AwardsContainer,
   PlayStoreAwards,
-} from "../styles/styles";
+} from "../styles/AwardsStyle";
 
 const Awards = () => {
+  const [opacity, translateY] = useFadeIn();
   return (
-    <AwardsContainer>
+    <AwardsContainer opacity={opacity} translateY={translateY}>
       <PlayStoreAwards>
         2018 구글 플레이스토어
         <br />

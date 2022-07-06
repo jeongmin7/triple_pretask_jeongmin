@@ -4,23 +4,23 @@ const easeOutExpo = (t: number) => {
   // t:  0 (움직임의 시작)에서 1 (움직임의 끝) 사이의 움직임 진척도
   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 };
-const useCountUp = (end: number, current = 0, duration = 2000) => {
-  const [count, setCount] = useState(current);
-  const frameRate = 1000 / 60; //1초에  60프레임
-  const totalFrame = Math.round(duration / frameRate);
+const useCountUp = (start = 0, end: number, duration = 2000): number => {
+  const [count, setCount] = useState<number>(start);
+  const frameDuration = 1000 / 60; //1초에 60 프레임 60 fps
 
   useEffect(() => {
+    let currentFrame = start;
+    const totalFrames = Math.round(duration / frameDuration);
     const counter = setInterval(() => {
-      current++;
-      const progress = easeOutExpo(current / totalFrame);
+      currentFrame++;
+      const progress = easeOutExpo(currentFrame / totalFrames);
       setCount(Math.round(end * progress));
-      if (progress === 1) {
+
+      if (currentFrame === totalFrames) {
         clearInterval(counter);
       }
-    }, frameRate);
-
-    //setInvertal(함수, 지연시간)
-  }, [end, frameRate, current, totalFrame]);
+    }, frameDuration);
+  }, [start, end, duration, frameDuration]);
 
   return count;
 };

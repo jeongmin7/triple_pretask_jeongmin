@@ -1,28 +1,24 @@
 import React from "react";
-import "./App.css";
 import Awards from "./components/Awards";
 import Metric from "./components/Metric";
 import TripleLogo from "./components/TripleLogo";
-import {
-  MainContainer,
-  ContentContainer,
-  RightPartContainer,
-} from "./styles/styles";
+import { ResponsiveSection, ContentContainer } from "./styles/ContainerStyle";
+import GlobalStyles from "./styles/GlobalStyle";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      <MainContainer>
+    <>
+      <GlobalStyles />
+
+      <ResponsiveSection>
         <ContentContainer>
           <TripleLogo />
-          <RightPartContainer>
-            <Metric />
-            <Awards />
-          </RightPartContainer>
+          <Metric />
+          <Awards />
         </ContentContainer>
-      </MainContainer>
-    </div>
+      </ResponsiveSection>
+    </>
   );
-}
+};
 
 export default App;

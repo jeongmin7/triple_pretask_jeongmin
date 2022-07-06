@@ -1,27 +1,29 @@
 import React from "react";
 import useCountUp from "../hooks/useCountUp";
-import { MetricContainer, MetricItem, Strong } from "../styles/styles";
-const Metric = () => {
-  const userCount = useCountUp(700);
-  const reviewCount = useCountUp(100);
-  const planCount = useCountUp(470);
+import useFadeIn from "../hooks/useFadeIn";
+import { MetricContainer, MetricItem, Strong } from "../styles/MetricStyle";
+const Metric: React.FC = () => {
+  const [opacity, translateY] = useFadeIn();
+  const userNumber = useCountUp(0, 700);
+  const reviewNumber = useCountUp(0, 100);
+  const planNumber = useCountUp(0, 470);
   return (
-    <MetricContainer>
+    <MetricContainer opacity={opacity} translateY={translateY}>
       <MetricItem>
         <Strong>
-          <span>{userCount}</span>만 명
+          <span>{userNumber}</span>만 명
         </Strong>
         의 여행자 <br />
       </MetricItem>
       <MetricItem>
         <Strong>
-          <span>{reviewCount}</span>만 개
+          <span>{reviewNumber}</span>만 개
         </Strong>
         의 여행 리뷰 <br />
       </MetricItem>
       <MetricItem>
         <Strong>
-          <span>{planCount}</span>만 개
+          <span>{planNumber}</span>만 개
         </Strong>
         의 여행 일정 <br />
       </MetricItem>

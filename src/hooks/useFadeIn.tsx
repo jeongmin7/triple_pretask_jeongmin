@@ -1,7 +1,17 @@
-import React from "react";
+import { useEffect, useState } from "react";
+export interface FadeInProps {
+  opacity: boolean;
+  translateY: boolean;
+}
+const useFadeIn = (): [boolean, boolean] => {
+  const [opacity, setOpacity] = useState<boolean>(false);
+  const [translateY, setTranslateY] = useState<boolean>(false);
 
-const useFadeIn = () => {
-  return <div></div>;
+  useEffect(() => {
+    setOpacity(true);
+    setTranslateY(true);
+  }, []);
+  return [opacity, translateY];
 };
 
 export default useFadeIn;

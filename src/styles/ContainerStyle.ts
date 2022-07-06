@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
+export const ResponsiveSection = styled.div`
   display: flex;
   justify-content: center;
   min-width: 1200px;

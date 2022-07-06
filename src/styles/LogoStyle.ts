@@ -1,6 +1,6 @@
 import { FadeInProps } from "../hooks/useFadeIn";
 import styled from "styled-components";
-import { TRIPLE_LOGO } from "../images";
+import { TRIPLE_LOGO } from "../assets/images";
 export const Triple = styled.div<FadeInProps>`
   background-image: url(${TRIPLE_LOGO});
   background-repeat: no-repeat;
@@ -23,5 +23,5 @@ export const Triple = styled.div<FadeInProps>`
   line-height: 15px;
   opacity: ${(props) => (props.opacity ? "1" : "0")};
   transform: translateY(${(props) => (props.translateY ? "0px" : "20px")});
-  transition: 700ms ease-in-out 0ms;
+  transition: 700ms ease-out 0ms;
 `;

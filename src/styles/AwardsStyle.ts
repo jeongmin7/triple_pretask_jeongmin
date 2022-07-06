@@ -1,12 +1,12 @@
 import { FadeInProps } from "../hooks/useFadeIn";
 import styled from "styled-components";
-import { APPSTORE, PLAYSTORE } from "../images";
+import { APPSTORE, PLAYSTORE } from "../assets/images";
 export const AwardsContainer = styled.div<FadeInProps>`
   display: block;
   margin: 50px 0px 140px 623px;
   opacity: ${(props) => (props.opacity ? "1" : "0")};
   transform: translateY(${(props) => (props.translateY ? "0px" : "20px")});
-  transition: 700ms ease-in 200ms;
+  transition: 700ms ease-out 200ms;
 `;
 export const PlayStoreAwards = styled.div`
   height: 54px;

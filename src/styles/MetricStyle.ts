@@ -6,7 +6,7 @@ export const MetricContainer = styled.div<FadeInProps>`
   margin-left: 623px;
   opacity: ${(props) => (props.opacity ? "1" : "0")};
   transform: translateY(${(props) => (props.translateY ? "0px" : "20px")});
-  transition: 700ms ease-out 100ms;
+  transition: all 700ms ease-out 100ms;
 `;
 export const MetricItem = styled.div`
   font-size: 36px;

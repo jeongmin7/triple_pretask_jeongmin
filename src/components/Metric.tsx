@@ -1,7 +1,29 @@
 import React from "react";
 import useCountUp from "../hooks/useCountUp";
 import useFadeIn from "../hooks/useFadeIn";
-import { MetricContainer, MetricItem, Strong } from "../styles/MetricStyle";
+import { FadeInProps } from "../hooks/useFadeIn";
+import styled from "styled-components";
+const MetricContainer = styled.div<FadeInProps>`
+  padding-top: 150px;
+  display: block;
+  margin-left: 623px;
+  opacity: ${(props) => (props.opacity ? "1" : "0")};
+  transform: translateY(${(props) => (props.translateY ? "0px" : "20px")});
+  transition: all 700ms ease-out 100ms;
+`;
+const MetricItem = styled.div`
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: rgb(58, 58, 58);
+`;
+
+const Strong = styled.span`
+  font-weight: bold;
+`;
+
 const Metric: React.FC = () => {
   const [opacity, translateY] = useFadeIn();
   const userNumber = useCountUp(0, 700);

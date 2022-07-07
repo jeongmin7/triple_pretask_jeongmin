@@ -6,7 +6,7 @@ export const AwardsContainer = styled.div<FadeInProps>`
   margin: 50px 0px 140px 623px;
   opacity: ${(props) => (props.opacity ? "1" : "0")};
   transform: translateY(${(props) => (props.translateY ? "0px" : "20px")});
-  transition: 700ms ease-out 200ms;
+  transition: all 700ms ease-out 200ms;
 `;
 export const PlayStoreAwards = styled.div`
   height: 54px;

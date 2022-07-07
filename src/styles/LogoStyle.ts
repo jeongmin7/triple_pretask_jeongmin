@@ -23,5 +23,5 @@ export const Triple = styled.div<FadeInProps>`
   line-height: 15px;
   opacity: ${(props) => (props.opacity ? "1" : "0")};
   transform: translateY(${(props) => (props.translateY ? "0px" : "20px")});
-  transition: 700ms ease-out 0ms;
+  transition: all 700ms ease-out 0ms;
 `;

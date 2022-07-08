@@ -28,7 +28,7 @@ const Triple = styled.div<FadeInProps>`
   transition: all 700ms ease-out 0ms;
 `;
 
-const TripleLogo = () => {
+const TripleLogo: React.FC = () => {
   const [opacity, translateY] = useFadeIn();
   return (
     <div>

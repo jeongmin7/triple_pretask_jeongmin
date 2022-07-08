@@ -39,7 +39,8 @@ const Awards: React.FC = () => {
         올해의 앱 최우수상 수상
       </PlayStoreAwards>
       <AppStoreAwards>
-        2018 애플 앱스토어 <br />
+        2018 애플 앱스토어
+        <br />
         오늘의 여행앱 선정
       </AppStoreAwards>
     </AwardsContainer>

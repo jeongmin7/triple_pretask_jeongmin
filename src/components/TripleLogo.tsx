@@ -30,6 +30,7 @@ const Triple = styled.div<FadeInProps>`
 
 const TripleLogo: React.FC = () => {
   const [opacity, translateY] = useFadeIn();
+
   return (
     <div>
       <Triple opacity={opacity} translateY={translateY}>

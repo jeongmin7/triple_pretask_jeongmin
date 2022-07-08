@@ -29,7 +29,7 @@ export const AppStoreAwards = styled(PlayStoreAwards)`
   margin-right: 0;
 `;
 
-const Awards = () => {
+const Awards: React.FC = () => {
   const [opacity, translateY] = useFadeIn();
   return (
     <AwardsContainer opacity={opacity} translateY={translateY}>
